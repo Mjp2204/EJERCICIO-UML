@@ -1,0 +1,8 @@
+@startuml
+
+Principal -> Banda : Afinar_banda()
+loop n veces
+    Banda -> Musico : Afinar_instrumento()
+    Musico -> Instrumento : afinar()
+end
+@enduml
