@@ -1,0 +1,8 @@
+@startuml
+
+package logica{
+
+}
+
+Principal -- Cartas
+@enduml
