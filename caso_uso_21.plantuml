@@ -1,0 +1,33 @@
+@startuml
+
+skinparam actorStyle awesome
+Jugador as player
+Casa as Dealer 
+
+Package Juego21{
+    usecase "Iniciar Juego" as J1
+    usecase "Jugar" as J2
+    usecase "Repartir cartas" as J3
+    usecase "Conteo cartas" as J4
+    usecase "Dar carta" as J5
+    usecase "Plantarse" as J6
+    usecase "Verificar ganador" as J7
+    usecase "Continuar juego" as J8
+    usecase "Conteo valores" as J9
+}
+
+player --> J1
+player --> J2
+Dealer --> J2
+J1 <|-- J2
+J2 --> J3
+J2 --> J4
+J2 --> J9
+J2 --> J7
+J2 --> J8
+J8 <.. J5
+J8 <.. J6
+
+
+
+@enduml
